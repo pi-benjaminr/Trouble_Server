@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="roll"
+        android:text="Roll" />
+
+    <Button
+        android:id="@+id/piece0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/roll"
+        android:onClick="piece0"
+        android:text="Piece1" />
+
+    <Button
+        android:id="@+id/piece1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/piece0"
+        android:layout_alignBottom="@+id/piece0"
+        android:layout_toRightOf="@+id/piece0"
+        android:onClick="piece1"
+        android:text="Piece2" />
+
+    <Button
+        android:id="@+id/piece2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/piece1"
+        android:layout_alignBottom="@+id/piece1"
+        android:layout_toRightOf="@+id/piece1"
+        android:onClick="piece2"
+        android:text="Piece3" />
+
+    <Button
+        android:id="@+id/piece3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/piece2"
+        android:layout_toRightOf="@+id/piece2"
+        android:onClick="piece3"
+        android:text="Piece4" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/piece0"
+        android:onClick="next"
+        android:text="End Turn" />
+
+    <Button
+        android:id="@+id/endgame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/next"
+        android:onClick="endgame"
+        android:text="End Game" />
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="update"
+        android:text="update" />
+
+    <TextView
+        android:id="@+id/die"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/roll"
+        android:layout_alignBottom="@+id/roll"
+        android:layout_toRightOf="@+id/roll"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/gameDisp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/endgame"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/chatGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/chatbox2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/gameDisp"
+        android:scrollbars="vertical"
+        android:text="chat" />
+
+    <Button
+        android:id="@+id/send2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="send"
+        android:text="Send" />
+
+    <Button
+        android:id="@+id/poll2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/next"
+        android:onClick="poll"
+        android:text="Poll" />
+
+    <EditText
+        android:id="@+id/chatbox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/send2"
+        android:layout_alignRight="@+id/endgame"
+        android:ems="10" />
+
+</RelativeLayout>
